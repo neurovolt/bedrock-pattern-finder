@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bedrock Chunk Finder</title>
+    <style>
+        body {
+            background: #1e1e1e;
+            color: #fff;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        input, button {
+            margin: 5px;
+            padding: 8px;
+            border-radius: 5px;
+            border: none;
+        }
+        button {
+            background: #3cba54;
+            color: white;
+            cursor: pointer;
+        }
+        #canvas {
+            margin-top: 20px;
+            background: #333;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Minecraft Bedrock Chunk Finder</h1>
+    <input type="number" id="chunk_x" placeholder="Chunk X">
+    <input type="number" id="chunk_z" placeholder="Chunk Z">
+    <input type="number" id="y" placeholder="Y coordinate" value="0">
+    <button onclick="loadChunk()">Load Chunk</button>
+
+    <canvas id="canvas" width="320" height="320"></canvas>
+
+    <script src="{{ url_for('static', filename='chunk.js') }}"></script>
+</body>
+</html>
