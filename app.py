@@ -1,4 +1,3 @@
-
 from flask import Flask, render_template, request, jsonify
 
 app = Flask(__name__)
@@ -45,8 +44,9 @@ def find_chunk():
     grid = data.get('grid')
     matches = []
 
-    for cx in range(-1000, 1001):
-        for cz in range(-1000, 1001):
+    # ✅ Reduced range for testing
+    for cx in range(-10, 11):
+        for cz in range(-10, 11):
             if generate_bedrock(cx, cz) == grid:
                 matches.append({'x': cx, 'z': cz})
 
