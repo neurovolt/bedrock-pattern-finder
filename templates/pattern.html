@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bedrock Pattern Guessor</title>
+    <style>
+        #grid {
+            display: grid;
+            grid-template-columns: repeat(16, 20px);
+            grid-template-rows: repeat(16, 20px);
+            gap: 2px;
+            margin-bottom: 10px;
+        }
+        .cell {
+            width: 20px;
+            height: 20px;
+            background: white;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+        .cell.active {
+            background: black;
+        }
+        button {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bedrock Pattern Guessor</h1>
+    <div id="grid"></div>
+    <button onclick="findChunk()">Find Chunk</button>
+    <button onclick="clearGrid()">Clear Grid</button>
+    <pre id="output"></pre>
+    <script src="/static/pattern.js"></script>
+</body>
+</html>
