@@ -44,9 +44,9 @@ def find_chunk():
     grid = data.get('grid')
     matches = []
 
-    # ✅ Reduced range for testing
-    for cx in range(-10, 11):
-        for cz in range(-10, 11):
+    # ✅ New range: -100 to +100
+    for cx in range(-100, 101):
+        for cz in range(-100, 101):
             if generate_bedrock(cx, cz) == grid:
                 matches.append({'x': cx, 'z': cz})
 
